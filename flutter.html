@@ -193,19 +193,41 @@
     </section>
 
     <section id="tabs-menu">
-     <div class="container">
-      <div class="tabs-header">
-        <div class="col"></div>
-      <div class="col">
+
+     <div class="container mt-5">
+      <div class="tabs-header">  
+      <div class="col py-3">
         <p class="fs-3 mt-5 mb-0 d-flex justify-content-center">Flutter is an open source framework by Google for</p>
         <p class="fs-3 my-0 d-flex justify-content-center"> building beautiful, natively compiled, multi-platform </p>
         <p class="fs-3 mb-5 d-flex justify-content-center">applications from a single codebase.</p>
+      </div>  
+      <div class="col d-flex flex-row justify-content-center">
+        <div class="buttons bg-secondary bg-opacity-10 rounded-pill mb-4">
+      <ul class="nav nav-pills " id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active rounded-pill px-5" id="pills-fast-tab" data-bs-toggle="pill" data-bs-target="#pills-fast" type="button" role="tab" aria-controls="pills-fast" aria-selected="true">Fast</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-pill px-5" id="pills-productive-tab" data-bs-toggle="pill" data-bs-target="#pills-productive" type="button" role="tab" aria-controls="pills-productive" aria-selected="false">Productive</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-pill px-5" id="pills-flexible-tab" data-bs-toggle="pill" data-bs-target="#pills-flexible" type="button" role="tab" aria-controls="pills-flexible" aria-selected="false">Flexible</button>
+        </li>
+      </ul>
+    </div>
+    </div>
       </div>
-      <div class="col"></div>
-      
-      
+
+      <div class="tabs-content">
+        <div class="col py-3">
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-fast" role="tabpanel" aria-labelledby="pills-fast-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="pills-productive" role="tabpanel" aria-labelledby="pills-productive-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="pills-flexible" role="tabpanel" aria-labelledby="pills-flexible-tab" tabindex="0">...</div>
+          </div>
+          
+        </div>
       </div>
-      <div class="tabs-content"></div>
      </div>
     </section>
 
