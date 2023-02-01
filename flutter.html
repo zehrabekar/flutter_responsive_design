@@ -37,6 +37,7 @@
                 >
                   <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <!-- offcanvas içeriği -->
                 <div
                   class="offcanvas offcanvas-start bg-primary d-xl-none"
@@ -46,27 +47,23 @@
                   aria-labelledby="offcanvasWithBothOptionsLabel"
                 >
                   <div class="offcanvas-header">
-                    <div class="col-3 my-3">
-                      <a class="navbar-brand ms-4" href="#logo">
+                    <div class="col-3 my-2">
+                      <a class="navbar-brand ms-0" href="#logo">
                         <img
                           src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg"
                       /></a>
                     </div>
                     <button
                       type="button"
-                      class="btn-close"
+                      class="btn-close mx-3 py-0"
                       data-bs-dismiss="offcanvas"
                       aria-label="Close"
                     ></button>
                   </div>
 
                   <div class="offcanvas-body">
-                    <div
-                      class="col bg-light bg-opacity-25 rounded-pill py-2 d-flex flex-row mb-4"
-                    >
-                      <div
-                        class="col-2 d-flex justify-content-center align-items-center py-2"
-                      >
+                    <div class="col bg-light bg-opacity-25 rounded-pill py-2 d-flex flex-row mb-4">
+                      <div class="col-2 d-flex justify-content-center align-items-center py-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
@@ -81,105 +78,119 @@
                         </svg>
                       </div>
 
-                      <div class="col-8 d-flex align-items-center">
-                        <input
-                          class="border-0 bg-transparent"
-                          type="text"
-                          placeholder="Search..."
-                        />
-                        <span class="placeholder bg-light"></span>
+                      <div class="col-10 d-flex align-items-center">
+                        <form action="#">
+                          <input type="search" placeholder="Search..." class="bg-transparent border-0"> 
+                        </form>
                       </div>
 
-                      <div
-                        class="col-2 d-flex justify-content-center align-items-center"
-                      >
-                        <button
-                          type="button"
-                          class="btn-close text-white"
-                          aria-label="Close"
-                        ></button>
+                      
+                    </div>
+
+                    <!-- accordion başlangıç -->
+                    <div class="accordion mt-3" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item bg-primary border-0  view-overlay">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                          <button class="accordion-button collapsed bg-primary border-0 text-white  rgba-red-strong" style="outline: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Multi-Platform
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                          <div class="accordion-body">
+                            <ul class="border-0" style="list-style-type: none">
+                              <li><a class="dropdown-item text-white text-opacity-75" href="#">Overview</a></li>
+                              <li><a class="dropdown-item text-white mt-3 text-opacity-75" href="#">Mobile</a></li>
+                              <li><a class="dropdown-item text-white mt-3 text-opacity-75" href="#">Web</a></li>
+                              <li><a class="dropdown-item text-white mt-3 text-opacity-75" href="#">Desktop</a></li>
+                              <li><a class="dropdown-item text-white mt-3 text-opacity-75" href="#">Embedded</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item  bg-primary border-0">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                          <button class="accordion-button collapsed bg-primary border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Development
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                          <div class="accordion-body">
+                            <ul class="border-0" style="list-style-type: none">
+                              <li><a class="dropdown-item text-white text-opacity-75" href="#">Overview</a></li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Learn</a></li>
+                              <li>
+                                <a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Flutter Favorites</a>
+                              </li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Packages</a></li>
+                              <li>
+                                <a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Monetization</a>
+                              </li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Games</a></li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">News</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item  bg-primary border-0">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                          <button class="accordion-button collapsed bg-primary border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Ecosystem
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                          <div class="accordion-body">
+                            <ul class="border-0" style="list-style-type: none">
+                              <li><a class="dropdown-item text-white text-opacity-75" href="#">Overview</a></li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Community</a></li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Events</a></li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Culture</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mt-1 mx-2">
+                        <button type="button" class="btn btn-primary">
+                          Showcase
+                        </button>
+                      </div>
+
+                      <div class="accordion-item  bg-primary border-0">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                          <button class="accordion-button collapsed bg-primary border-0 text-white mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                            Docs
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                          <div class="accordion-body">
+                            <ul class="border-0 my-0" style="list-style-type: none">
+                              <li><a class="dropdown-item text-white text-opacity-75" href="#">Overview</a></li>
+                              <li>
+                                <a class="dropdown-item text-white text-opacity-75 mt-3" href="#">What's new</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Editor support</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Hot reload</a>
+                              </li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Profiling</a></li>
+                              <li>
+                                <a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Install Flutter</a>
+                              </li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">DevTools</a></li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Cookbook</a></li>
+                              <li><a class="dropdown-item text-white text-opacity-75 mt-3" href="#">Tutorials</a></li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-primary dropdown-toggle mt-3"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Multi-Platform
-                      </button>
-                      <ul class="dropdown-menu border-0">
-                        <li><a class="dropdown-item" href="#">Overview</a></li>
-                        <li><a class="dropdown-item" href="#">Mobile</a></li>
-                        <li><a class="dropdown-item" href="#">Web</a></li>
-                        <li><a class="dropdown-item" href="#">Desktop</a></li>
-                        <li><a class="dropdown-item" href="#">Embedded</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="dropdown">
-                      <button class="btn btn-primary dropdown-toggle mt-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Development
-                      </button>
-
-                      <ul class="dropdown-menu border-0">
-                        <li><a class="dropdown-item" href="#">Overview</a></li>
-                        <li><a class="dropdown-item" href="#">Learn</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Flutter Favorites</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Packages</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Monetization</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Games</a></li>
-                        <li><a class="dropdown-item" href="#">News</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="dropdown">
-                      <button class="btn btn-primary dropdown-toggle mt-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ecosystem
-                      </button>
-                      <ul class="dropdown-menu border-0">
-                        <li><a class="dropdown-item" href="#">Overview</a></li>
-                        <li><a class="dropdown-item" href="#">Community</a></li>
-                        <li><a class="dropdown-item" href="#">Events</a></li>
-                        <li><a class="dropdown-item" href="#">Culture</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="mt-3">
-                      <button type="button" class="btn btn-primary">
-                        Showcase
-                      </button>
-                    </div>
-
-                    <div class="dropdown">
-                      <button class="btn btn-primary dropdown-toggle mt-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Docs
-                      </button>
-                      <ul class="dropdown-menu border-0">
-                        <li><a class="dropdown-item" href="#">Overview</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">What's new</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Editor support</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Hot reload</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Profiling</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Install Flutter</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#">DevTools</a></li>
-                        <li><a class="dropdown-item" href="#">Cookbook</a></li>
-                        <li><a class="dropdown-item" href="#">Tutorials</a></li>
-                      </ul>
-                    </div>
+                  <!-- accordion bitiş  -->
+                    
+                    
                   </div>
 
                   <div class="footer">
