@@ -11,53 +11,57 @@
       crossorigin="anonymous"
     />
     <style>
-     /* placeholder rengini değiştirme */
-          ::-webkit-input-placeholder { 
-          color: white;}
-            
-          /* navbar iconuna tıklandığında oluşan kenarlığı kaldırma */
-          .navbar-toggler{
-            color: transparent;}
+      /* change placeholder color */
+      ::-webkit-input-placeholder {
+        color: white;
+      }
 
-            /* navbar icon rengini beyaz yapma */
-          .navbar-toggler .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");}
+      /* removed border when clicking on navbar button */
+      .navbar-toggler {
+        color: transparent;
+      }
 
-            #navbar:hover {
-              background-color: rgba(255, 255,255,0.1);
-              border-radius: 60%;
-            }
+      /* change navbar icon color to white */
+      .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
 
-            #close:hover {
-              background-color: rgba(255, 255,255,0.1);
-            }
+      #navbar:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 60%;
+      }
 
-          .dropdown-item:hover {
-            background-color: rgba(255, 255,255,0.1);
-            width: 50%;
-          }
+      #close:hover {
+        background-color: rgba(6, 1, 1, 0.2);
+      }
 
-          #nav-item:hover {
-            background-color: rgba(255, 255,255,0.1);
-          }
+      .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 50%;
+      }
 
-          /* inputa tıklandığında oluşan kenarlığı kaldırdı */
-          input:focus {
-           outline: 0px; 
-          }
-         
-           .accordion-header:hover {
-            background-color: rgba(255, 255,255,0.1);
-           }
-          
-           #searchdiv {
-            background-color: rgba(255, 255,255,0.1);
-           }
+      #nav-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
 
-           /* accordion başlığındaki okları beyaz yapma */
-           .accordion-button:after {
-           background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;}
-          </style>
+      /* removed border when clicking input item */
+      input:focus {
+        outline: 0px;
+      }
+
+      .accordion-header:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      #searchdiv {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* change arrow's color in accordion header */
+      .accordion-button:after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+      }
+    </style>
   </head>
   <body>
     <section id="header" class="container-fluid bg-primary pb-5">
@@ -73,184 +77,418 @@
             <div class="col-9 d-flex justify-content-end">
               <div>
                 <div>
-                <button
-                  class="navbar-toggler border-0 py-2"
-                  id="navbar"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
-                  aria-expanded="false"
-                  aria-label="offcanvasWithBothOptionsLabel">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <!-- offcanvas içeriği -->
-                <div
-                  class="offcanvas offcanvas-start bg-primary d-xl-none"
-                  data-bs-scroll="true"
-                  tabindex="-1"
-                  id="offcanvasWithBothOptions"
-                  aria-labelledby="offcanvasWithBothOptionsLabel"
-                >
-                  <div class="offcanvas-header">
-                    <div class="col-3 my-2">
-                      <a class="navbar-brand ms-0" href="#logo">
-                        <img
-                          src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg"
-                      /></a>
-                    </div>
-                    <button type="button" id="close" class="btn-close btn-close-white mx-3 py-2 btn btn-outline-light border-0 rounded-pill" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
+                  <button
+                    class="navbar-toggler border-0 py-2"
+                    id="navbar"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"
+                    aria-expanded="false"
+                    aria-label="offcanvasWithBothOptionsLabel"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
 
-                  <div class="offcanvas-body">
-                    <div class="col rounded-pill py-2 d-flex flex-row mb-4" id="searchdiv">
-                      <div class="col-2 d-flex justify-content-center align-items-center py-2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-search text-white"
-                          viewBox="0 0 16 16"
+                  <!-- offcanvas's content -->
+                  <div
+                    class="offcanvas offcanvas-start bg-primary d-xl-none"
+                    data-bs-scroll="true"
+                    tabindex="-1"
+                    id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <div class="col-3 my-2">
+                        <a class="navbar-brand ms-0" href="#logo">
+                          <img
+                            src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg"
+                        /></a>
+                      </div>
+                      <button
+                        type="button"
+                        id="close"
+                        class="btn-close btn-close-white mx-3 py-2 border-0 rounded-pill"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                      <div
+                        class="col rounded-pill py-2 d-flex flex-row mb-4"
+                        id="searchdiv"
+                      >
+                        <div
+                          class="col-2 d-flex justify-content-center align-items-center py-2"
                         >
-                          <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                          />
-                        </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-search text-white"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                            />
+                          </svg>
+                        </div>
+
+                        <div class="col-10 d-flex align-items-center">
+                          <form action="#">
+                            <input
+                              type="search"
+                              placeholder="Search..."
+                              class="bg-transparent border-0"
+                            />
+                          </form>
+                        </div>
                       </div>
 
-                      <div class="col-10 d-flex align-items-center">
-                        <form action="#">
-                          <input type="search" placeholder="Search..." class="bg-transparent border-0"> 
-                        </form>
-                      </div>
+                      <!-- accordion start -->
+                      <div
+                        class="accordion mt-3"
+                        id="accordionPanelsStayOpenExample"
+                      >
+                        <div class="accordion-item bg-primary border-0">
+                          <h2
+                            class="accordion-header rounded-pill"
+                            id="panelsStayOpen-headingOne"
+                          >
+                            <button
+                              class="accordion-button collapsed bg-transparent border-0 text-white"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapseOne"
+                              aria-expanded="true"
+                              aria-controls="panelsStayOpen-collapseOne"
+                            >
+                              Multi-Platform
+                            </button>
+                          </h2>
+                          <div
+                            id="panelsStayOpen-collapseOne"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingOne"
+                          >
+                            <div class="accordion-body">
+                              <ul
+                                class="border-0"
+                                style="list-style-type: none"
+                              >
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Overview</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white mt-2 text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Mobile</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white mt-2 text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Web</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white mt-2 text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Desktop</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white mt-2 text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Embedded</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
 
-                      
+                        <div class="accordion-item bg-primary border-0">
+                          <h2
+                            class="accordion-header rounded-pill"
+                            id="panelsStayOpen-headingTwo"
+                          >
+                            <button
+                              class="accordion-button collapsed bg-transparent border-0 text-white"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="panelsStayOpen-collapseTwo"
+                            >
+                              Development
+                            </button>
+                          </h2>
+                          <div
+                            id="panelsStayOpen-collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingTwo"
+                          >
+                            <div class="accordion-body">
+                              <ul
+                                class="border-0"
+                                style="list-style-type: none"
+                              >
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Overview</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Learn</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Flutter Favorites</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Packages</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Monetization</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Games</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >News</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item bg-primary border-0">
+                          <h2
+                            class="accordion-header rounded-pill"
+                            id="panelsStayOpen-headingThree"
+                          >
+                            <button
+                              class="accordion-button collapsed bg-transparent border-0 text-white"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapseThree"
+                              aria-expanded="false"
+                              aria-controls="panelsStayOpen-collapseThree"
+                            >
+                              Ecosystem
+                            </button>
+                          </h2>
+                          <div
+                            id="panelsStayOpen-collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingThree"
+                          >
+                            <div class="accordion-body">
+                              <ul
+                                class="border-0"
+                                style="list-style-type: none"
+                              >
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Overview</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Community</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Events</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Culture</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <h2
+                          class="accordion-header rounded-pill"
+                          id="panelsStayOpen-headingFour"
+                        >
+                          <div class="mt-1 mx-2 py-1">
+                            <button
+                              type="button"
+                              class="btn btn-transparent text-white rounded-pill"
+                            >
+                              Showcase
+                            </button>
+                          </div>
+                        </h2>
+
+                        <div class="accordion-item bg-primary border-0">
+                          <h2
+                            class="accordion-header rounded-pill"
+                            id="panelsStayOpen-headingFour"
+                          >
+                            <button
+                              class="accordion-button collapsed bg-transparent border-0 text-white mt-2"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapseFour"
+                              aria-expanded="false"
+                              aria-controls="panelsStayOpen-collapseFour"
+                            >
+                              Docs
+                            </button>
+                          </h2>
+                          <div
+                            id="panelsStayOpen-collapseFour"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingFour"
+                          >
+                            <div class="accordion-body">
+                              <ul
+                                class="border-0 my-0"
+                                style="list-style-type: none"
+                              >
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 p-1 rounded-pill"
+                                    href="#"
+                                    >Overview</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >What's new</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Editor support</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Hot reload</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Profiling</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Install Flutter</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >DevTools</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Cookbook</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill"
+                                    href="#"
+                                    >Tutorials</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- accordion end  -->
                     </div>
 
-                    <!-- accordion başlangıç -->
-                    <div class="accordion mt-3" id="accordionPanelsStayOpenExample">
-                      <div class="accordion-item bg-primary border-0">
-                        <h2 class="accordion-header rounded-pill" id="panelsStayOpen-headingOne">
-                          <button class="accordion-button collapsed bg-transparent border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Multi-Platform
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-                          <div class="accordion-body">
-                            <ul class="border-0" style="list-style-type: none">
-                              <li><a class="dropdown-item text-white text-opacity-75 p-1 rounded-pill" href="#">Overview</a></li>
-                              <li><a class="dropdown-item text-white mt-2 text-opacity-75 p-1 rounded-pill" href="#">Mobile</a></li>
-                              <li><a class="dropdown-item text-white mt-2 text-opacity-75  p-1 rounded-pill" href="#">Web</a></li>
-                              <li><a class="dropdown-item text-white mt-2 text-opacity-75  p-1 rounded-pill" href="#">Desktop</a></li>
-                              <li><a class="dropdown-item text-white mt-2 text-opacity-75  p-1 rounded-pill" href="#">Embedded</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="footer">
+                      <div class="d-grid gap-2">
+                        <button
+                          class="bg-white text-primary fw-bold border-0 rounded-pill py-2 px-4 mx-4"
+                          type="button"
+                        >
+                          Get started
+                        </button>
 
-                      <div class="accordion-item  bg-primary border-0">
-                        <h2 class="accordion-header rounded-pill" id="panelsStayOpen-headingTwo">
-                          <button class="accordion-button collapsed bg-transparent border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                            Development
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                          <div class="accordion-body">
-                            <ul class="border-0" style="list-style-type: none">
-                              <li><a class="dropdown-item text-white text-opacity-75  p-1 rounded-pill" href="#">Overview</a></li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Learn</a></li>
-                              <li>
-                                <a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Flutter Favorites</a>
-                              </li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Packages</a></li>
-                              <li>
-                                <a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Monetization</a>
-                              </li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Games</a></li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">News</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="accordion-item  bg-primary border-0">
-                        <h2 class="accordion-header rounded-pill" id="panelsStayOpen-headingThree">
-                          <button class="accordion-button collapsed bg-transparent border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                            Ecosystem
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                          <div class="accordion-body">
-                            <ul class="border-0" style="list-style-type: none">
-                              <li><a class="dropdown-item text-white text-opacity-75 p-1 rounded-pill" href="#">Overview</a></li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Community</a></li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Events</a></li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Culture</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <h2 class="accordion-header rounded-pill" id="panelsStayOpen-headingFour">
-                      <div class="mt-1 mx-2 py-1">
-                        <button type="button" class="btn btn-transparent text-white rounded-pill">
-                          Showcase
+                        <button
+                          class="text-white fw-bold border-0 rounded-pill py-2 px-4 mx-4 mb-3"
+                          type="button"
+                          style="background-color: #8001ff"
+                        >
+                          Flutter Forward
                         </button>
                       </div>
-                      </h2>
-
-                      <div class="accordion-item  bg-primary border-0">
-                        <h2 class="accordion-header rounded-pill" id="panelsStayOpen-headingFour">
-                          <button class="accordion-button collapsed bg-transparent border-0 text-white mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                            Docs
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-                          <div class="accordion-body">
-                            <ul class="border-0 my-0" style="list-style-type: none">
-                              <li><a class="dropdown-item text-white text-opacity-75 p-1 rounded-pill" href="#">Overview</a></li>
-                              <li>
-                                <a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">What's new</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Editor support</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Hot reload</a>
-                              </li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Profiling</a></li>
-                              <li>
-                                <a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Install Flutter</a>
-                              </li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">DevTools</a></li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Cookbook</a></li>
-                              <li><a class="dropdown-item text-white text-opacity-75 mt-2 p-1 rounded-pill" href="#">Tutorials</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  <!-- accordion bitiş  -->
-                    
-                    
-                  </div>
-
-                  <div class="footer">
-                    <div class="d-grid gap-2">
-                      <button class="bg-white text-primary fw-bold border-0 rounded-pill py-2 px-4 mx-4" type="button">
-                        Get started
-                      </button>
-
-                      <button class="text-white fw-bold border-0 rounded-pill py-2 px-4 mx-4 mb-3" type="button" style="background-color: #8001ff">
-                        Flutter Forward
-                      </button>
                     </div>
                   </div>
+                  <!-- offcanvas content end -->
                 </div>
-                <!-- offcanvas içeriği bitiş-->
-              </div>
                 <div
                   class="collapse navbar-collapse"
                   id="navbarSupportedContent"
@@ -345,9 +583,8 @@
           <p class="fs-1 text-white fw-bold">Build apps for any screen</p>
         </div>
       </div>
-      <!-- fotograflar kısmı, burayı 3 sütuna böldüm -->
+
       <div class="container-fluid bg-primary d-flex flex-row px-0">
-        <!-- soldaki 1. sütun -->
         <div class="col-4 d-flex flex-column mt-5">
           <img
             src="https://storage.googleapis.com/cms-storage-bucket/5932d4e90754eb6996bb.jpg"
@@ -372,16 +609,15 @@
             </div>
           </div>
         </div>
-        <!-- ortadaki sutün -->
+
         <div class="col-3 ms-3">
           <img
             src="https://storage.googleapis.com/cms-storage-bucket/90e34daecca082eb9b28.png"
             class="img-thumbnail bg-primary border-0"
           />
         </div>
-        <!-- sağdaki sütun. bu sütunu 4 ve 8 olarak ikiye böldüm -->
+
         <div class="col-5 d-flex flex-row">
-          <!-- ilk sütun -->
           <div class="col-4 d-flex flex-column mx-3 ms-4">
             <div class="mt-5"></div>
             <div class="mt-5">
@@ -398,7 +634,6 @@
             </div>
           </div>
 
-          <!-- 2. sütun -->
           <div class="col-7 d-flex flex-column">
             <div class="mt-5"></div>
             <div class="mt-5"></div>
