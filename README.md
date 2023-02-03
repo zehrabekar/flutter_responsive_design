@@ -9,6 +9,7 @@
 ![navbar](https://user-images.githubusercontent.com/93613471/216707149-f7fdb6e4-6420-4801-8cea-5f3c7cd51619.png)<br><br>
 <b>Navbar Content</b><br><br>
 ![navbar_content](https://user-images.githubusercontent.com/93613471/216707151-d1d52587-ae6d-4c12-af92-44b5f3eebc4a.png)<br><br>
+<b>Responsive</b>
 ![responsive_1](https://user-images.githubusercontent.com/93613471/216707154-aaef23c4-9263-4651-94fe-9d205344a694.png)<br><br>
 ![responsive_2](https://user-images.githubusercontent.com/93613471/216707160-23794c90-368b-4439-b430-c5bb0f67f4cb.png)<br><br>
 ![responsive_3](https://user-images.githubusercontent.com/93613471/216707163-c905e61c-34fe-4873-8cee-f137355a681d.png)<br><br>
