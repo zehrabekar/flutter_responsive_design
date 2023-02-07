@@ -1,4 +1,4 @@
-<p>In this project, I aimed to improve on responsive design.<br><br> <b>Main Page</b> <br> [source] (https://flutter.dev/) <br>
+[source](https://flutter.dev/) <br> <p>In this project, I aimed to improve on responsive design.<br><br> <b>Main Page</b> <br>
 
 ![main1](https://user-images.githubusercontent.com/93613471/216706860-eeb21eae-a8c7-4fd7-8af5-d97213a4836b.png)<br><br>
 ![main_2](https://user-images.githubusercontent.com/93613471/216706666-786752a0-28b3-4f43-9b56-a9e3db35a07a.png)<br><br>
